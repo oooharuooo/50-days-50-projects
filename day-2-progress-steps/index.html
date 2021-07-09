@@ -5,10 +5,22 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./styles.css" />
-		<title>Expanding cards</title>
+		<title>Progress Steps</title>
 	</head>
 	<body>
-		<h1>zcczz</h1>
+		<div class="container">
+			<div class="progress-container">
+				<div class="progress-line"></div>
+				<div class="circle active">1</div>
+				<div class="circle">2</div>
+				<div class="circle">3</div>
+				<div class="circle">4</div>
+			</div>
+			<div class="container-button">
+				<button type="button" class="btn btn-prev" disabled>Prev</button>
+				<button type="button" class="btn btn-next">Next</button>
+			</div>
+		</div>
 		<script src="./app.js"></script>
 	</body>
 </html>

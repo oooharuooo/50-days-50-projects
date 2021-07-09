@@ -5,6 +5,67 @@
 }
 
 body {
-	background-color: blue;
 	margin: 0;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	place-items: center;
+}
+
+.progress-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 250px;
+	position: relative;
+	&:before {
+		content: "";
+		background-color: #e1d7d7;
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		z-index: -1;
+		transition: 0.5s ease-in-out;
+	}
+}
+.progress-line {
+	background-color: red;
+	position: absolute;
+	height: 5px;
+	z-index: -1;
+	width: 0;
+	transition: 0.5s ease-in-out;
+}
+.circle {
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	text-align: center;
+	border: 1px solid #c9b1b1;
+	background-color: white;
+	transition: 0.6s ease-in-out;
+
+	&.active {
+		border: 2px solid #4a4e6f;
+	}
+}
+
+.container-button {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-around;
+}
+
+.btn {
+	border: 0;
+	border-radius: 5px;
+	padding: 0.5rem 1rem;
+	background-color: #4e72ae;
+	color: white;
+	cursor: pointer;
+	&:disabled {
+		background-color: gray;
+		cursor: not-allowed;
+	}
 }
